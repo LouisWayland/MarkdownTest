@@ -1,6 +1,13 @@
 # AIO-RK3399C开发 #
+- [下载源码](#下载源码)
+- [根文件系统制作](#根文件系统制作)
+- [UART配置](#UART配置)
+- [固件打包](#固件打包)
+- [Qt环境配置](./Qt/qt5.md)
+
+
 [**官网资料下载**](http://www.t-firefly.com/doc/download/page/id/54.html)
-## 下载源码 ##
+## <span id="下载源码">下载源码</span> ##
 - Rockchip原厂Buildroot项目: [https://github.com/rockchip-linux/buildroot](https://github.com/rockchip-linux/buildroot)  
 - Buildroot官网: [https://buildroot.org](https://buildroot.org/)
 
@@ -32,7 +39,7 @@
     	# 更新代码
     	./repo.sh
 
-## 根文件系统制作 ##
+## <span id="根文件系统制作">根文件系统制作</span> ##
 - **[制作busybox镜像](./Buildroot/buildroot.md)**
 - **[制作Ubuntu镜像](./Ubuntu/ubuntu1804.md)**
 
@@ -67,7 +74,7 @@ parameter文件指定固件更新时各文件所烧写到的地址
 
 ![](./images/build_module.png)
 
-## UART配置 ##
+## <span id="UART配置">UART配置</span> ##
 AIO-3399C 支持SPI桥接/扩展4个增强功能串口(UART)的功能，分别为UART1，UART2，RS232，RS485。每个UART都拥有256字节的FIFO缓冲区，用于数据接收和发送。
 
 ![](./images/485.png)
@@ -81,7 +88,7 @@ AIO-3399C 支持SPI桥接/扩展4个增强功能串口(UART)的功能，分别�
 
 ![](./images/dts_spi.png)
 
-## 固件打包 ##
+## <span id="固件打包">固件打包</span> ##
 ### 更新链接 ###
 为确保 rockdev/ 目录下文件链接正确，更新各部分镜像链接：  
 `./mkfirmware.sh`
